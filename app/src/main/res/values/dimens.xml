@@ -4,6 +4,6 @@
     <dimen name="item_horizontal_margin">16dp</dimen>
     <dimen name="item_vertical_margin">8dp</dimen>
     <dimen name="item_corner_radius">4dp</dimen>
-    <dimen name="item_padding">8dp</dimen>
+    <dimen name="medium_padding">8dp</dimen>
 
 </resources>
