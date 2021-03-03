@@ -7,4 +7,5 @@
     <dimen name="medium_padding">8dp</dimen>
     <dimen name="empty_text_size">14sp</dimen>
     <dimen name="card_item_text_size">14sp</dimen>
+    <dimen name="value_horizontal_padding">4dp</dimen>
 </resources>

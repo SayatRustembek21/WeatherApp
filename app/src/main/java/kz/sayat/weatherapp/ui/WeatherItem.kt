@@ -5,7 +5,7 @@ data class WeatherItem (
         val temperatureKelvin: Float,
         val feelsLikeKelvin: Float,
         val humidity: Int,
-        val windSpeed: Int
+        val windSpeed: Float
 ) {
     val temperatureCelsius: Int
         get() = (temperatureKelvin - 273).toInt()

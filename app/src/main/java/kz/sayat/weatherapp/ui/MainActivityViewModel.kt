@@ -24,7 +24,7 @@ class MainActivityViewModel(app: Application,
     val weatherList: LiveData<List<WeatherItem>>
         get() = _weatherList
 
-    private val _scrollToTop = MutableLiveData<Boolean>()
+    private val _scrollToTop = MutableLiveData<Boolean>(false)
     val scrollToTop: LiveData<Boolean>
         get() = _scrollToTop
 
@@ -43,7 +43,7 @@ class MainActivityViewModel(app: Application,
                         addAll(_weatherList.value?.toList().orEmpty())
                     }
 
-                    delay(1000L)
+                    delay(100L)
                     scrollToTop()
                 }
                 is NetworkResponse.ApiError -> {

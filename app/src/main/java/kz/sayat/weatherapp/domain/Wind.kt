@@ -1,6 +1,6 @@
 package kz.sayat.weatherapp.domain
 
 data class Wind(
-        val speed: Int,
+        val speed: Float,
         val deg: Int
 )

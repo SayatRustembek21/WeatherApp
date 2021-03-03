@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import kotlinx.coroutines.delay
 import kz.sayat.weatherapp.databinding.ActivityMainBinding
 import kz.sayat.weatherapp.ui.MainActivityViewModel
 import kz.sayat.weatherapp.ui.WeatherListAdapter
@@ -43,15 +42,15 @@ class MainActivity : AppCompatActivity() {
         })
 
         mainActivityViewModel.scrollToTop.observe(this, {
-            it?.let {
-                if (it) {
-                    binding.cityWeatherRecycler.smoothScrollToPosition(0)
-                }
+            if (it) {
+                binding.cityWeatherRecycler.smoothScrollToPosition(0)
             }
         })
 
         binding.searchBtn.setOnClickListener {
-            mainActivityViewModel.addWeatherByCityName(binding.cityNameEditText.text.toString().trim())
+            val query = binding.cityNameEditText.text.toString().trim()
+            if(query.isEmpty())return@setOnClickListener
+            mainActivityViewModel.addWeatherByCityName(query)
         }
     }
 

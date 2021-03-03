@@ -35,6 +35,8 @@
                 app:layout_constraintStart_toEndOf="@id/cityNameLabel"
                 app:layout_constraintTop_toTopOf="parent"
                 android:textSize="@dimen/card_item_text_size"
+                android:paddingStart="@dimen/value_horizontal_padding"
+                android:paddingEnd="@dimen/value_horizontal_padding"
                 tools:text="Almaty"/>
 
             <TextView
@@ -54,6 +56,8 @@
                 app:layout_constraintStart_toEndOf="@id/temperatureLabel"
                 app:layout_constraintTop_toBottomOf="@id/cityName"
                 android:textSize="@dimen/card_item_text_size"
+                android:paddingStart="@dimen/value_horizontal_padding"
+                android:paddingEnd="@dimen/value_horizontal_padding"
                 tools:text="15 °C"/>
 
             <TextView
@@ -73,6 +77,8 @@
                 app:layout_constraintStart_toEndOf="@id/feelsLikeLabel"
                 app:layout_constraintBaseline_toBaselineOf="@id/feelsLikeLabel"
                 tools:text="15 °C"
+                android:paddingStart="@dimen/value_horizontal_padding"
+                android:paddingEnd="@dimen/value_horizontal_padding"
                 android:textSize="@dimen/card_item_text_size"/>
 
             <TextView
@@ -92,6 +98,8 @@
                 app:layout_constraintStart_toEndOf="@id/humidityLabel"
                 app:layout_constraintBaseline_toBaselineOf="@id/humidityLabel"
                 tools:text="15 %"
+                android:paddingStart="@dimen/value_horizontal_padding"
+                android:paddingEnd="@dimen/value_horizontal_padding"
                 android:textSize="@dimen/card_item_text_size"/>
 
             <TextView
@@ -111,6 +119,8 @@
                 app:layout_constraintStart_toEndOf="@id/windSpeedLabel"
                 app:layout_constraintBaseline_toBaselineOf="@id/windSpeedLabel"
                 tools:text="15 m/s"
+                android:paddingStart="@dimen/value_horizontal_padding"
+                android:paddingEnd="@dimen/value_horizontal_padding"
                 android:textSize="@dimen/card_item_text_size"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
