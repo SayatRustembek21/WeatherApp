@@ -39,7 +39,7 @@
                     app:layout_constraintEnd_toStartOf="@id/searchBtn"
                     android:layout_marginEnd="@dimen/item_vertical_margin"
                     android:inputType="text"
-                    tools:text="Almaty"/>
+                    android:hint="@string/write_city_name"/>
 
                 <Button
                     android:id="@+id/searchBtn"
@@ -49,6 +49,15 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:text="@string/search"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/searchBtn"
+                    app:layout_constraintBottom_toBottomOf="@id/searchBtn"
+                    app:layout_constraintEnd_toEndOf="@id/searchBtn"
+                    app:layout_constraintStart_toStartOf="@id/searchBtn"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -60,10 +69,24 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="@dimen/medium_padding"
+        android:clipToPadding="false"
         tools:listitem="@layout/item_city_weather"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/appBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        android:textSize="@dimen/empty_text_size"
+        android:text="@string/city_list_empty"
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

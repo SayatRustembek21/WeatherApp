@@ -4,8 +4,8 @@ import kz.sayat.weatherapp.ui.MainActivityViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-val viewModelsModule = module {
+val viewModelModule = module {
     viewModel {
-        MainActivityViewModel(get(), get())
+        MainActivityViewModel(get(), get(), get())
     }
 }

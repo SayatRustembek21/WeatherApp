@@ -1,10 +1,10 @@
 package kz.sayat.weatherapp.domain
 
 data class Main(
-        val temp: Double,
-        val feels_like: Double,
-        val temp_min: Double,
-        val temp_max: Double,
+        val temp: Float,
+        val feels_like: Float,
+        val temp_min: Float,
+        val temp_max: Float,
         val pressure: Int,
         val humidity: Int
 )

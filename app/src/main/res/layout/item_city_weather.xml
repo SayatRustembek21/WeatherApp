@@ -1,36 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="@dimen/cardview_default_radius"
-    android:layout_marginStart="@dimen/item_horizontal_margin"
-    android:layout_marginEnd="@dimen/item_horizontal_margin"
-    android:layout_marginTop="@dimen/item_vertical_margin"
-    android:layout_marginBottom="@dimen/item_vertical_margin">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/medium_padding">
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin"
+        android:layout_marginTop="@dimen/item_vertical_margin"
+        android:layout_marginBottom="@dimen/item_vertical_margin">
 
-        <TextView
-            android:id="@+id/cityName"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Almaty"/>
+            android:padding="@dimen/medium_padding">
 
-        <TextView
-            android:id="@+id/temperature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cityName"
-            tools:text="15 "/>
+            <TextView
+                android:id="@+id/cityNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/card_item_text_size"
+                android:text="@string/city_name"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/cityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cityNameLabel"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/card_item_text_size"
+                tools:text="Almaty"/>
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/temperatureLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cityName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/card_item_text_size"
+                android:text="@string/temperature"/>
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/temperatureLabel"
+                app:layout_constraintTop_toBottomOf="@id/cityName"
+                android:textSize="@dimen/card_item_text_size"
+                tools:text="15 °C"/>
+
+            <TextView
+                android:id="@+id/feelsLikeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/feels_like"
+                android:textColor="@color/black"
+                android:textSize="@dimen/card_item_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/temperatureLabel"/>
+
+            <TextView
+                android:id="@+id/feelsLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/feelsLikeLabel"
+                app:layout_constraintBaseline_toBaselineOf="@id/feelsLikeLabel"
+                tools:text="15 °C"
+                android:textSize="@dimen/card_item_text_size"/>
+
+            <TextView
+                android:id="@+id/humidityLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity"
+                android:textColor="@color/black"
+                android:textSize="@dimen/card_item_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/feelsLikeLabel"/>
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/humidityLabel"
+                app:layout_constraintBaseline_toBaselineOf="@id/humidityLabel"
+                tools:text="15 %"
+                android:textSize="@dimen/card_item_text_size"/>
+
+            <TextView
+                android:id="@+id/windSpeedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind_speed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/card_item_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/humidityLabel"/>
+
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/windSpeedLabel"
+                app:layout_constraintBaseline_toBaselineOf="@id/windSpeedLabel"
+                tools:text="15 m/s"
+                android:textSize="@dimen/card_item_text_size"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

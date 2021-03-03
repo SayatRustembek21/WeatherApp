@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">WeatherApp</string>
     <string name="search">Search</string>
+    <string name="network_connection_problem">You have problem with network connection</string>
+    <string name="unhandled_error">We don\'t know what the problem is</string>
+    <string name="write_city_name">Write city name</string>
+    <string name="city_list_empty">City list is empty</string>
+    <string name="temperature">Temperature: </string>
+    <string name="celsius">%1$s °C</string>
+    <string name="feels_like">Feels like: </string>
+    <string name="humidity">Humidity: </string>
+    <string name="percent">%1$s %%</string>
+    <string name="wind_speed">Wind speed: </string>
+    <string name="m_s">%1$s m/s</string>
+    <string name="city_name">City name: </string>
 </resources>

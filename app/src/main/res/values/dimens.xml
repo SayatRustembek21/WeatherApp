@@ -5,5 +5,6 @@
     <dimen name="item_vertical_margin">8dp</dimen>
     <dimen name="item_corner_radius">4dp</dimen>
     <dimen name="medium_padding">8dp</dimen>
-
+    <dimen name="empty_text_size">14sp</dimen>
+    <dimen name="card_item_text_size">14sp</dimen>
 </resources>
